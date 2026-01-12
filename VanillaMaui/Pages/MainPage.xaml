@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pageModels="clr-namespace:VanillaMaui.PageModels"             
+             xmlns:models="clr-namespace:VanillaMaui.Models"
+             xmlns:controls="clr-namespace:VanillaMaui.Pages.Controls"
+             xmlns:pullToRefresh="clr-namespace:Syncfusion.Maui.Toolkit.PullToRefresh;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="VanillaMaui.Pages.MainPage"
+             x:DataType="pageModels:MainPageModel"
+             x:Name="OverviewPage"
+             Title="{Binding Today}">
+
+    <VerticalStackLayout>
+        <Label Text="Enter your name" />
+        <Entry Text="{Binding Name}"
+               Placeholder="Name" />
+        <Label Text="{Binding NameLength}" />
+        <Label Text="{Binding FullName}" />
+    </VerticalStackLayout>
+</ContentPage>
