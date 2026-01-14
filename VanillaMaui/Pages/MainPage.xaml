@@ -16,6 +16,19 @@
         <Entry Text="{Binding Name}"
                Placeholder="Name" />
         <Label Text="{Binding NameLength}" />
-        <Label Text="{Binding FullName}" />
+        <Button Text="Add to List"
+                Command="{Binding AddToListCommand}" />
+        <!--List of names added -->
+        <CollectionView ItemsSource="{Binding Students}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="pageModels:Student">
+                    <HorizontalStackLayout>
+                        <Label Text="{Binding Name}" />
+                        <Label Text="{Binding Id, StringFormat=', Id: {0}'}" />
+                        <Label Text="{Binding Grade, StringFormat=', Grade: {0}'}" />
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>
